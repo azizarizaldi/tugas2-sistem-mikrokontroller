@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Aziz Arif Rizaldi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -3, "left": 415.6, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 34.8, "left": 455, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 109,
+      "left": 440.75,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": 71.2, "left": 299.82, "attrs": {} }
+  ],
+  "connections": [
+    [ "bb1:4b.j", "bb1:bp.3", "black", [ "v0" ] ],
+    [ "uno:GND.2", "bb1:bp.1", "black", [ "v29.3", "h272.1", "v-38.4" ] ],
+    [ "uno:5V", "bb1:bn.1", "red", [ "v38.9", "h291.2" ] ],
+    [ "bb1:bp.2", "pir1:VCC", "black", [ "v-10.5", "h-36.8", "v28.8", "h-86.4" ] ],
+    [ "bb1:bn.2", "pir1:GND", "red", [ "v46.7", "h-94.4" ] ],
+    [ "uno:A0", "pir1:OUT", "magenta", [ "v19.7", "h147.2" ] ],
+    [ "r1:1", "bb1:4b.i", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:4t.e", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:5t.d", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:4t.d", "", [ "$bb" ] ],
+    [ "uno:13", "bb1:5t.e", "green", [ "v-28.2", "h355" ] ]
+  ],
+  "dependencies": {}
+}

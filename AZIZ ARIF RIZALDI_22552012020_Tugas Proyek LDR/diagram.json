@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Aziz Arif Rizaldi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -31.8, "left": 146.8, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -28.2, "left": -192.6, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -13.2, "left": 167, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 33.05,
+      "left": 181,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 109.85,
+      "left": 382.6,
+      "rotate": 180,
+      "attrs": { "value": "10000" }
+    },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 60.8, "left": 212, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.3", "bb1:bp.1", "black", [ "v28.7", "h186.4", "v-37.5" ] ],
+    [ "bb1:bp.25", "bb1:tp.25", "black", [ "v-0.9", "h11.2", "v-173.1" ] ],
+    [ "bb1:tp.6", "bb1:8t.a", "black", [ "v0" ] ],
+    [ "bb1:bn.25", "bb1:tn.25", "red", [ "v-1.3", "h20.8", "v-172.8" ] ],
+    [ "uno:5V", "bb1:bn.1", "red", [ "v38.3", "h215", "v-38.4" ] ],
+    [ "bb1:tn.21", "ldr1:VCC", "red", [ "v0" ] ],
+    [ "bb1:bp.19", "bb1:23b.j", "black", [ "v0" ] ],
+    [ "uno:A0", "bb1:29b.j", "magenta", [ "v19.1", "h147.8", "v-38.4", "h278.4" ] ],
+    [ "r1:1", "bb1:8t.c", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:2t.c", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:29b.i", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:23b.i", "", [ "$bb" ] ],
+    [ "ldr1:GND", "bb1:23b.f", "", [ "$bb" ] ],
+    [ "ldr1:DO", "bb1:23b.g", "", [ "$bb" ] ],
+    [ "ldr1:AO", "bb1:23b.h", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:3t.b", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:2t.b", "", [ "$bb" ] ],
+    [ "uno:13", "bb1:3t.a", "green", [ "v-28.8", "h259.6" ] ]
+  ],
+  "dependencies": {}
+}
