@@ -8,7 +8,7 @@ Repo ini digunakan untuk mengerjakan tugas 2 dari matakuliah sistem mikrokontrol
 ![Tampilan PIR](preview/pir.gif)
 
 ## Tugas Proyek LCD
-![Tampilan 3.3](preview/lcd.gif)
+![Tampilan LCD](preview/lcd.gif)
 
 ### Author
 - Aziz Arif Rizaldi
